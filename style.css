@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fbfbfb;
+  font-family: "Roboto";
+}
+
+#white-background {
+  background-color: #fff;
+  margin: 2%;
+  min-height: 100vh;
+  padding: 3%;
+}
+
+/* Navigation */
+
+#burger {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.burger-line {
+  background-color: #000;
+  width: 20px;
+  height: 3px;
+  margin-bottom: 3px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  width: 10%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.3rem;
+  width: 20%;
+}
+
+.isHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+#logo {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 3rem;
+}
+
+#logo-line {
+  background-color: #000;
+  height: 5px;
+  width: 30px;
+}
+
+/* Title */
+
+.title,
+.title-about {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  text-align: center;
+}
+.title h1,
+.title-about h1 {
+  font-weight: 200;
+}
+.title p,
+.title-about p {
+  margin-top: 2vh;
+  font-size: 1.2rem;
+}
+
+/******************** Home page *******************/
+
+/* Grid-container */
+
+#grid-container {
+  height: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr;
+  grid-template-areas:
+    "one two three"
+    "one four four"
+    "five four four"
+    "six seven eight"
+    "six nine eight";
+  grid-gap: 1%;
+}
+
+#grid-container .one {
+  grid-area: one;
+  background-image: url(./images/girl.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#grid-container .two {
+  grid-area: two;
+  background-image: url(./images/puppy.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#grid-container .three {
+  grid-area: three;
+  background-image: url(./images/coffee.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#grid-container .four {
+  grid-area: four;
+  background-image: url(./images/budha.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#grid-container .five {
+  grid-area: five;
+  background-image: url(./images/typer.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#grid-container .six {
+  grid-area: six;
+  background-image: url(./images/wine.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#grid-container .seven {
+  grid-area: seven;
+  background-image: url(./images/apple.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#grid-container .eight {
+  grid-area: eight;
+  background-image: url(./images/guy.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#grid-container .nine {
+  grid-area: nine;
+  background-image: url(./images/flower.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#middle {
+  background-color: #000;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+
+#middle .text {
+  font-size: 1.4rem;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#middle .text h1 {
+  font-weight: 200;
+}
+
+#middle:hover {
+  opacity: 0.7;
+}
+
+/* About */
+
+#about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#about #about-text {
+  width: 50%;
+  font-size: 1.3rem;
+  padding-left: 4%;
+}
+
+#about #img-container {
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about #img-container #img {
+  background-color: blue;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/avatar.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/************************** Post page ***************************/
+
+#post-img {
+  height: 80vh;
+  width: 100%;
+  background-image: url(./images/apple.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#post-text {
+  font-size: 1.3rem;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
+#footer-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+}
+
+#footer-container #icons {
+  padding-top: 1vh;
+}
+
+#icons i {
+  margin-left: 1vw;
+}
+
+@media screen and (max-width: 992px) {
+  ul {
+    font-size: 1rem;
+    width: 40%;
+  }
+
+  #about {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  #about #img-container {
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vh;
+  }
+
+  #middle .text h1 {
+    font-weight: 200;
+    font-size: 1rem;
+  }
+
+  #about #about-text {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .title-about,
+  .title {
+    font-size: 0.7rem;
+  }
+
+  .title-about {
+    height: 12vh;
+  }
+
+  footer {
+    margin-top: 5vh;
+  }
+
+  #grid-container {
+    height: 200vw;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "one two"
+      "one nine"
+      "four four"
+      "eight seven"
+      "eight five"
+      "three three"
+      "six six";
+    grid-gap: 1%;
+  }
+
+  #post-img {
+    height: 40vh;
+    width: 100%;
+  }
+
+  #post-text {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.7rem;
+  }
+}
